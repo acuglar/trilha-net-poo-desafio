@@ -48,12 +48,26 @@ namespace DesafioPOO.Models
 
         public void Ligar()
         {
-            Console.WriteLine("Ligando...");
+            if (!string.IsNullOrEmpty(Numero))
+            {
+                Console.WriteLine("Ligando...");
+            }
+            else
+            {
+                Console.WriteLine("Necessário definir um numero válido para efetuar ligações.\n");
+            }
         }
 
         public void ReceberLigacao()
         {
-            Console.WriteLine("Recebendo ligação...");
+            if (!string.IsNullOrEmpty(Numero))
+            {
+                Console.WriteLine("Recebendo ligação...");
+            }
+            else
+            {
+                Console.WriteLine("Necessário definir um numero válido para receber ligações.\n");
+            }
         }
 
         public abstract void InstalarAplicativo(string nomeApp);
